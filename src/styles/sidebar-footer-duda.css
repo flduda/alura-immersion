@@ -43,7 +43,6 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    font-family: "DM SANS", sans-serif ;
 }
 
 .library {
@@ -72,7 +71,6 @@ body {
     border: 0px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "DM SANS", sans-serif ;
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -113,8 +111,6 @@ body {
 .section-playlist .section-playlist__content .text {
     padding-bottom: 14px;
     color: #fff;
-    font-family: "DM SANS", sans-serif ;
-
 }
 
 .section-playlist .section-playlist__content .title {
@@ -134,7 +130,6 @@ body {
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
-    font-family: "DM SANS", sans-serif ;
     text-decoration: none;
     text-transform: none;
     padding: 10px;
@@ -172,49 +167,41 @@ body {
     
 }
 
-footer {
-    background: linear-gradient(to right,#FFC0CB, #0000FF );
-    padding: 0px;
-    margin-top: 700px;
-    text-align: left; /* Add this line */
-
-}   
-
-footer .text {
-    color: #fff;
+.disclaimer-premium {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.disclaimer-premium .text {
+   flex-shrink: 0;
+}
+.disclaimer-premium .disclaimer-premium__title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-footer .footer-text {
-    color: #fff;
+.disclaimer-premium .disclaimer-premium__subtitle {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-
-footer .footer__content__button {
-        display: block;
-        margin-top: 5px;
-        color: #000;
-        background-color: #fff;
-        border: 0px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 700;
-        font-family: "DM SANS", sans-serif ;
-        text-align: right;
-        text-decoration: none;
-        text-transform: none;
-        padding: 10px 10px;
-    }
-
-    @media screen and (min-width: 860px){
-        footer {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-    }
-    @media screen and (max-width: 859px){
-        footer{
-            text-align: center;
-            padding: 10px;
-        }
-    }
+.disclaimer-premium button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 20px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    flex-shrink: 0;
+}

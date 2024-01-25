@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spotify Imersão</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./src/styles/reset.css">
+        <link rel="stylesheet" href="./src/styles/vars.css">
+        <link rel="stylesheet" href="./src/styles/main-content.css">
+        <link rel="stylesheet" href="./src/styles/sidebar-footer-duda.css">
 
         <link rel="stylesheet" 
             href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
@@ -74,16 +76,46 @@
 
              </div>
         </div>    
-        
-        <footer>
-            <div class="footer-text">
-                <h2>Enjoy our free trial for 7 days!</h2>
-                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.<p>
+
+        <main>
+            <div class="main-container">
+                <nav class="header__navigation">
+                    <div class="navigation">
+                        <button class="arrow-left">
+                            <img src="./src/assets/icons/small-left.png" alt="left arrow">
+                        </button>
+                        <button class="arrow-right">
+                            <img src="./src/assets/icons/small-right.png" alt="right arrow">
+                        </button>
+
+                        <div class="header-search">
+                            <img src="./src/assets/icons/search.png"" alt="">
+                            <input id="search-input" type="text" maxlength="800" placeholder="What is your hit today?"/>
+                        </div>
+
+                        <div class="header-login">
+                            <button class="subscribe">Subscribe</button>
+                            <button class="login">Login</button>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            <button class="footer__content__button">
-                Sign up free
-            </button>
-        </footer>
+        </main>
+
+
+        <footer class="disclaimer-premium">
+            <div class="text">
+              <p class="disclaimer-premium__title">Enjoy our free trial!</p>
+              <p class="disclaimer-premium__subtitle">
+                Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+              </p>
+            </div>
+            <div class="button">
+              <button type="button">Sign up here</button>
+            </div>
+          </footer>
+
+
 
     </body>
 </html>
