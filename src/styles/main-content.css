@@ -43,7 +43,7 @@
 .header-search {
   display: flex;
   align-items: center;
-  width: 850px;
+  width: 370px;
   height: 48px;
   margin-left: 8px;
   background-color: #242424;
@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
 }
-.header-search input{
+.header-search input {
   background: transparent;
   border: none;
   padding: 0 100px 0 12px;
@@ -72,26 +72,37 @@
   outline: none;
 }
 
-.header-login .subscribe{
+.header-login .subscribe {
   color: #a7a7a7;
   font-size: 16px;
   font-weight: 700;
   background-color: transparent;
-  margin-right: 15px;
-  padding: 20px;
+  margin: 30px;
 }
 
-.header-login .login{
+.header-login .login {
   width: 100px;
-  height: 40px;
+  height: 48px;
   color: #000;
   font-size: 16px;
   font-weight: 700;
   border-radius: 40px;
 }
 
+.header-search:hover {
+  border: 1px solid #fff;
+}
+
+.header-login .subscribe:hover {
+  transform: scale (1.04);
+  color: var(--text-base-light);
+}
+
+.header-login .login {
+  transform: scale(1.04);
+}
+
 .playlist-section-container {
-  display: flex;
   height: 68vh;
   padding-top: 16px;
   margin: 10px;
@@ -116,7 +127,6 @@
   font-weight: 700;
 }
 
-/* SCROLL */
 .offer__scroll-container {
   max-height: 43vh;
   margin: 24px;
@@ -130,18 +140,14 @@
 .offer__scroll-container::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-/* FIM SCROLL */
 
 .offer__list-item {
-display: grid;
+  display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   gap: 16px;
   margin-bottom: 16px; 
-  display: grid; 
-  gap: 16px;
-  grid-gap: 32px; 
   margin: 0 auto;
 }
 
