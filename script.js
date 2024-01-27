@@ -1,50 +1,36 @@
-const searchInput = document.getElementById('search-input');
-const resultArtist = document.getElementById('result-artist');
-const resultPlaylist = document.getElementById('result-playlists');
+const resultArtist = document.getElementById("result-artist");
+const playlistContainer = document.getElementById("result-playlists");
+const searchInput = document.getElementById("search-input");
 
 function requestApi(searchTerm) {
-  fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)
+  const url = `http://localhost:3000/artists?name_like=${searchTerm}`;
+    fetch(url)
     .then((response) => response.json())
-    .then((result) => displayResults(result));
+    .then((results) => displayResults(results));
 }
 
-function displayResults(result) {
-  // Assuming you want to display multiple artists
-  // Create a container to hold multiple artists
-  const artistsContainer = document.createElement('div');
+function displayResults(results) {
+  resultPlaylists.classList.add('hidden')
+  const artistImage = document.getElementById("artist-img")
+  const artistName = document.getElementById("artist-name")
 
-  result.forEach((element) => {
-    const artistDiv = document.createElement('div');
-
-    const artistName = document.createElement('span');
-    artistName.innerText = element.name;
-
-    const artistImage = document.createElement('img');
-    artistImage.src = element.urlImg;
-
-    artistDiv.appendChild(artistImage);
-    artistDiv.appendChild(artistName);
-
-    artistsContainer.appendChild(artistDiv);
+  results.forEach((element) => {
+    artistImage.src = element.urlImg
+    artistName.innerText = element.name
   });
-
-  // Clear existing content in resultArtist
-  resultArtist.innerHTML = '';
-
-  // Append the container with multiple artists to resultArtist
-  resultArtist.appendChild(artistsContainer);
-
-  // Show the resultArtist container
-  resultArtist.classList.remove('hidden');
+  resultArtist.classList.remove("hidden");
 }
 
-searchInput.addEventListener('input', function () {
+function hidePlaylists() {
+  playlistContainer.classList.add("hidden");
+}
+
+searchInput.addEventListener("input", function () {
   const searchTerm = searchInput.value.toLowerCase();
-  if (searchTerm === '') {
-    resultPlaylist.classList.add('hidden');
-    resultArtist.classList.remove('hidden');
+  if (searchTerm === "") {
+    resultArtist.classList.add("hidden");
+    playlistContainer.classList.remove("hidden");
     return;
   }
-
   requestApi(searchTerm);
 });
