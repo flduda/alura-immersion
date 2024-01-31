@@ -1,5 +1,5 @@
 @media screen and (max-width: 1015px) {
-  .header-search {
+ /* .header-search {
     display: none;
     width: auto !important;
   }
@@ -8,13 +8,14 @@
     font-size: 12px !important;
     padding: 10px !important;
     margin-right: 5px !important;
-  }
+  }*/
 
   .offer__list-item {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/*
 @media screen and (min-width: 1016px) and (max-width:1140px) {
   .header-search {
     width: auto !important;

@@ -13,20 +13,20 @@ body {
     
 }
 
-.sidebar__naviation {
+.sidebar__navigation {
     background-color: #121212;
     border-radius: 8px;
     padding: 16px 0 0 16px;
 }
 
-.sidebar__naviation .logo {
+.sidebar__navigation .logo {
     background: #121212;
     display: flex;
     border-radius: 8px;
     padding: 10px 0 0 16px; 
 }
 
-.sidebar__naviation .logo img {
+.sidebar__navigation .logo img {
     width: 80px;
 }
 
@@ -59,12 +59,12 @@ body {
     margin-top: 10px;
 }
 
-.library .library__content {
+.library .library_content {
     display: flex;
     justify-content: space-between;
 }
 
-.library .library__button {
+.library .library_button {
     display: flex;
     margin-top: 10px;
     color: #b3b3b3;
@@ -78,14 +78,14 @@ body {
     padding: 20px 10px;
 }
 
-.library .library__button .fa {
+.library .library_button .fa {
     font-size: 20px;
     margin-right: 10px;
     font-weight: 300;
     padding-right: 8px;
 }
 
-.library .library__content .fa-plus {
+.library .library_content .fa-plus {
     margin: 24px 10px;
 }
 
